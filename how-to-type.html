@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Type — Varnaakshara IME Keyboard Reference</title>
+<meta name="description" content="Learn how to type in Hindi, Kannada, Telugu, Tamil, Sanskrit, Bengali, Gujarati, Malayalam and more Indian languages using Varnaakshara IME phonetic keyboard.">
+<meta name="keywords" content="how to type hindi, how to type kannada, indic keyboard layout, baraha keyboard, phonetic typing, indian language keyboard, transliteration reference">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#09090b;--s1:#111113;--s2:#18181b;--card:#1c1c1f;
+  --border:rgba(255,255,255,.07);--text:#fafafa;--dim:#a1a1aa;--dim2:#71717a;
+  --orange:#ea580c;--amber:#f59e0b;
+  --sans:'Inter',system-ui,sans-serif;--serif:'Instrument Serif',Georgia,serif;
+  --mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth;background:var(--bg);color:var(--text);font-family:var(--sans)}
+body{overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+::selection{background:rgba(234,88,12,.3)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-thumb{background:#333;border-radius:99px}
+
+/* ---- NAV ---- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;
+  display:flex;align-items:center;justify-content:space-between;padding:0 40px;
+  background:rgba(9,9,11,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border)}
+.nl{font-weight:700;font-size:.9rem;letter-spacing:-.02em}
+.nl a{transition:color .2s}
+.nl a:hover{color:var(--orange)}
+.nr{display:flex;align-items:center;gap:24px}
+.nr a{font-size:.8rem;color:var(--dim2);transition:color .2s}
+.nr a:hover{color:var(--text)}
+.nr .cta{color:var(--bg);background:var(--text);padding:6px 18px;border-radius:8px;font-weight:600;font-size:.78rem;transition:all .2s}
+.nr .cta:hover{background:var(--orange);color:#fff}
+
+/* ---- PAGE HEADER ---- */
+.page-header{padding:100px 40px 48px;text-align:center}
+.page-header h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
+.page-header h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--orange)}
+.page-header p{color:var(--dim);font-size:1rem;max-width:520px;margin:0 auto;line-height:1.7}
+
+/* ---- MAIN CONTENT ---- */
+.mx{max-width:1100px;margin:0 auto;padding:0 40px}
+.sep{max-width:1100px;margin:0 auto;height:1px;background:var(--border)}
+
+/* ---- KEYBOARD MAP ---- */
+.km-lang-row{display:flex;gap:6px;margin-bottom:28px;flex-wrap:wrap;justify-content:center}
+.km-lang{padding:5px 12px;border-radius:6px;font-size:.72rem;cursor:pointer;
+  border:1px solid var(--border);color:var(--dim2);transition:all .2s;background:transparent}
+.km-lang:hover{border-color:#444;color:var(--dim)}
+.km-lang.active{background:rgba(234,88,12,.1);border-color:rgba(234,88,12,.3);color:var(--orange)}
+
+.kb-wrap{max-width:840px;margin:0 auto 48px;perspective:800px}
+.kb-row{display:flex;gap:4px;margin-bottom:4px;justify-content:center}
+.kb-key{position:relative;min-width:48px;height:52px;border-radius:7px;cursor:pointer;
+  background:var(--s2);border:1px solid var(--border);border-bottom:3px solid #222;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transition:all .12s ease;user-select:none;padding:2px 4px}
+.kb-key:hover{background:var(--card);border-color:#444;transform:translateY(-1px)}
+.kb-key:active,.kb-key.pressed{transform:translateY(2px);border-bottom-width:1px;
+  background:var(--s1);box-shadow:inset 0 1px 4px rgba(0,0,0,.3)}
+.kb-key .kb-en{font-size:.55rem;color:var(--dim2);font-family:var(--mono);line-height:1.1}
+.kb-key .kb-in{font-size:.95rem;line-height:1.2;min-height:1.1em}
+.kb-key.vowel{border-color:rgba(234,88,12,.2);background:rgba(234,88,12,.06)}
+.kb-key.vowel:hover{background:rgba(234,88,12,.12);border-color:rgba(234,88,12,.4)}
+.kb-key.consonant{border-color:rgba(245,158,11,.15);background:rgba(245,158,11,.04)}
+.kb-key.consonant:hover{background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.35)}
+.kb-key.special{border-color:rgba(139,92,246,.15);background:rgba(139,92,246,.04)}
+.kb-key.special:hover{background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.35)}
+.kb-key .kb-tip{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:#222;color:var(--text);padding:6px 10px;border-radius:6px;font-size:.7rem;
+  white-space:nowrap;z-index:10;pointer-events:none;
+  box-shadow:0 4px 16px rgba(0,0,0,.5);border:1px solid #333}
+.kb-key .kb-tip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  border:5px solid transparent;border-top-color:#222}
+.kb-key:hover .kb-tip{display:block}
+.kb-space{flex:1;max-width:280px;min-width:120px}
+
+.kb-preview{text-align:center;margin-bottom:32px;padding:16px 20px;background:var(--bg);
+  border:1px solid var(--border);border-radius:10px;max-width:600px;margin-left:auto;margin-right:auto}
+.kb-preview-label{font-size:.6rem;color:var(--dim2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.kb-preview-text{font-size:1.6rem;min-height:2rem;word-break:break-word;font-family:var(--sans);
+  color:var(--text);transition:opacity .15s}
+.kb-preview-hint{font-size:.65rem;color:#333;margin-top:6px}
+
+.kb-legend{display:flex;gap:16px;justify-content:center;margin-bottom:28px;flex-wrap:wrap}
+.kb-legend-item{display:flex;align-items:center;gap:6px;font-size:.7rem;color:var(--dim2)}
+.kb-legend-dot{width:10px;height:10px;border-radius:3px}
+.kb-legend-dot.lg-v{background:rgba(234,88,12,.25);border:1px solid rgba(234,88,12,.4)}
+.kb-legend-dot.lg-c{background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.35)}
+.kb-legend-dot.lg-s{background:rgba(139,92,246,.2);border:1px solid rgba(139,92,246,.35)}
+
+.ref-tabs{display:flex;gap:4px;margin-bottom:20px;flex-wrap:wrap}
+.ref-tab{padding:6px 14px;border-radius:6px;font-size:.72rem;cursor:pointer;
+  border:1px solid var(--border);color:var(--dim2);transition:all .2s;background:transparent}
+.ref-tab:hover{border-color:#444;color:var(--dim)}
+.ref-tab.active{background:rgba(234,88,12,.1);border-color:rgba(234,88,12,.3);color:var(--orange)}
+.ref-panel{display:none}
+.ref-panel.active{display:block}
+.ref-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--border);
+  border-radius:10px;overflow:hidden}
+.ref-table th{text-align:left;padding:10px 14px;font-size:.68rem;font-weight:600;
+  color:var(--orange);background:var(--s2);letter-spacing:.05em;text-transform:uppercase;
+  border-bottom:1px solid var(--border)}
+.ref-table td{padding:8px 14px;font-size:.82rem;border-bottom:1px solid var(--border);
+  background:var(--s1);transition:background .2s}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table tr:hover td{background:var(--s2)}
+.ref-table .rt-en{font-family:var(--mono);color:var(--dim);font-size:.78rem}
+.ref-table .rt-sc{font-size:1.05rem}
+.ref-table .rt-varga{font-size:.6rem;color:var(--dim2);font-weight:500;letter-spacing:.08em;
+  text-transform:uppercase;padding:6px 14px;background:var(--bg);border-bottom:1px solid var(--border)}
+
+.km-try{max-width:600px;margin:48px auto 0;padding:28px;background:var(--s1);
+  border:1px solid var(--border);border-radius:14px}
+.km-try-title{font-size:.72rem;font-weight:600;color:var(--dim);margin-bottom:14px;
+  letter-spacing:.04em;text-transform:uppercase}
+.km-try-input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:10px;
+  padding:12px 16px;font-family:var(--mono);font-size:.9rem;color:var(--text);
+  outline:none;transition:border-color .2s;margin-bottom:12px}
+.km-try-input:focus{border-color:rgba(234,88,12,.4)}
+.km-try-input::placeholder{color:#333}
+.km-try-output{min-height:48px;padding:14px 16px;background:var(--bg);
+  border-radius:10px;border:1px solid var(--border);font-size:1.5rem;word-break:break-word}
+.km-try-output-label{font-size:.6rem;color:var(--dim2);letter-spacing:.1em;
+
+/* ---- FOOTER ---- */
+footer{text-align:center;padding:48px 40px;border-top:1px solid var(--border);
+  font-size:.72rem;color:var(--dim2)}
+footer a{color:var(--dim);transition:color .2s}
+footer a:hover{color:var(--orange)}
+
+/* ---- ANIMATIONS ---- */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.rv.v{opacity:1;transform:none}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width:768px){
+  nav{padding:0 16px}
+  .nr{gap:12px}
+  .page-header{padding:80px 20px 32px}
+  .mx{padding:0 16px}
+  .kb-wrap{display:none}
+  .kb-preview{display:none}
+  .kb-legend{display:none}
+  .ref-table{font-size:.75rem}
+  .ref-table td,.ref-table th{padding:6px 8px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nl"><a href="index.html">✦ Varnaakshara</a></div>
+  <div class="nr">
+    <a href="index.html">Home</a>
+    <a href="index.html#features">Features</a>
+    <a href="https://github.com/Exaggarate/Varnaakshara/releases" target="_blank" class="cta">Download</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>How to <em>Type</em></h1>
+  <p>Explore the phonetic keyboard mapping — see exactly which English keys produce which Indic characters in each language.</p>
+</div>
+
+<div class="mx">
+
+  <div class="rv" style="margin-top:24px">
+    <div class="km-lang-row" id="kmLangs"></div>
+
+    <div class="kb-legend">
+      <div class="kb-legend-item"><div class="kb-legend-dot lg-v"></div>Vowels</div>
+      <div class="kb-legend-item"><div class="kb-legend-dot lg-c"></div>Consonants</div>
+      <div class="kb-legend-item"><div class="kb-legend-dot lg-s"></div>Special</div>
+    </div>
+
+    <div class="kb-preview" id="kbPreview">
+      <div class="kb-preview-label">Click keys to type</div>
+      <div class="kb-preview-text" id="kbPreviewText"></div>
+      <div class="kb-preview-hint">Click keys or use your keyboard · Backspace to delete</div>
+    </div>
+
+    <div class="kb-wrap" id="kbWrap"></div>
+  </div>
+
+  <div class="sep" style="margin:48px auto"></div>
+
+  <div class="rv">
+    <div class="ref-tabs" id="refTabs">
+      <button class="ref-tab active" data-tab="vowels">Vowels</button>
+      <button class="ref-tab" data-tab="consonants">Consonants</button>
+      <button class="ref-tab" data-tab="special">Special</button>
+      <button class="ref-tab" data-tab="conjuncts">Conjuncts</button>
+    </div>
+    <div id="refPanels"></div>
+  </div>
+
+  <div class="sep" style="margin:48px auto"></div>
+
+  <div class="rv">
+    <div class="km-try">
+      <div class="km-try-title">⌨ Practice here</div>
+      <input class="km-try-input" id="kmTryIn" type="text" placeholder="Type phonetically… try 'namaste' or 'bharata'" spellcheck="false" autocomplete="off">
+      <div class="km-try-output-label">Output</div>
+      <div class="km-try-output" id="kmTryOut"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer style="margin-top:80px">
+  <p>Varnaakshara IME · <a href="https://github.com/Exaggarate/Varnaakshara" target="_blank">GitHub</a> · <a href="index.html">Back to Home</a> · Made for भारत</p>
+</footer>
+
+<script>
+// ===== KEYBOARD MAP SECTION =====
+(function(){
+
+// --- Extended MAPS for all 12 languages ---
+const KM_MAPS={
+hindi:{
+  vowels:{a:'अ',aa:'आ',A:'आ',i:'इ',ee:'ई',I:'ई',u:'उ',oo:'ऊ',U:'ऊ',Ru:'ऋ',e:'ए',ai:'ऐ',o:'ओ',au:'औ'},
+  consonants:{k:'क',kh:'ख',K:'ख',g:'ग',gh:'घ',G:'घ','~g':'ङ',ch:'च',Ch:'छ',j:'ज',jh:'झ',J:'झ','~j':'ञ',
+    T:'ट',Th:'ठ',D:'ड',Dh:'ढ',N:'ण',t:'त',th:'थ',d:'द',dh:'ध',n:'न',p:'प',ph:'फ',b:'ब',bh:'भ',m:'म',
+    y:'य',r:'र',l:'ल',v:'व',w:'व',sh:'श',Sh:'ष',s:'स',h:'ह',L:'ळ'},
+  signs:{a:'',aa:'ा',A:'ा',i:'ि',ee:'ी',I:'ी',u:'ु',oo:'ू',U:'ू',Ru:'ृ',e:'े',ai:'ै',o:'ो',au:'ौ'},
+  virama:'्',anusvara:'ं',visarga:'ः',danda:'।',ddanda:'॥',avagraha:'ऽ',
+  nums:{'0':'०','1':'१','2':'२','3':'३','4':'४','5':'५','6':'६','7':'७','8':'८','9':'९'}
+},
+kannada:{
+  vowels:{a:'ಅ',aa:'ಆ',A:'ಆ',i:'ಇ',ee:'ಈ',I:'ಈ',u:'ಉ',oo:'ಊ',U:'ಊ',Ru:'ಋ',e:'ಎ',E:'ಏ',ai:'ಐ',o:'ಒ',O:'ಓ',au:'ಔ'},
+  consonants:{k:'ಕ',kh:'ಖ',K:'ಖ',g:'ಗ',gh:'ಘ',G:'ಘ','~g':'ಙ',ch:'ಚ',Ch:'ಛ',j:'ಜ',jh:'ಝ',J:'ಝ','~j':'ಞ',
+    T:'ಟ',Th:'ಠ',D:'ಡ',Dh:'ಢ',N:'ಣ',t:'ತ',th:'ಥ',d:'ದ',dh:'ಧ',n:'ನ',p:'ಪ',ph:'ಫ',b:'ಬ',bh:'ಭ',m:'ಮ',
+    y:'ಯ',r:'ರ',l:'ಲ',v:'ವ',w:'ವ',sh:'ಶ',Sh:'ಷ',s:'ಸ',h:'ಹ',L:'ಳ'},
+  signs:{a:'',aa:'ಾ',A:'ಾ',i:'ಿ',ee:'ೀ',I:'ೀ',u:'ು',oo:'ೂ',U:'ೂ',Ru:'ೃ',e:'ೆ',E:'ೇ',ai:'ೈ',o:'ೊ',O:'ೋ',au:'ೌ'},
+  virama:'್',anusvara:'ಂ',visarga:'ಃ',danda:'।',ddanda:'॥',avagraha:'ಽ',
+  nums:{'0':'೦','1':'೧','2':'೨','3':'೩','4':'೪','5':'೫','6':'೬','7':'೭','8':'೮','9':'೯'}
+},
+tamil:{
+  vowels:{a:'அ',aa:'ஆ',A:'ஆ',i:'இ',ee:'ஈ',I:'ஈ',u:'உ',oo:'ஊ',U:'ஊ',e:'எ',E:'ஏ',ai:'ஐ',o:'ஒ',O:'ஓ',au:'ஔ'},
+  consonants:{k:'க',g:'க',ch:'ச',j:'ஜ',T:'ட',D:'ட',N:'ண',t:'த',d:'த',n:'ந',p:'ப',b:'ப',m:'ம',
+    y:'ய',r:'ர',l:'ல',v:'வ',w:'வ',sh:'ஶ',Sh:'ஷ',s:'ஸ',h:'ஹ',L:'ள',zh:'ழ',R:'ற',nn:'ன'},
+  signs:{a:'',aa:'ா',A:'ா',i:'ி',ee:'ீ',I:'ீ',u:'ு',oo:'ூ',U:'ூ',e:'ெ',E:'ே',ai:'ை',o:'ொ',O:'ோ',au:'ௌ'},
+  virama:'்',anusvara:'ம்',visarga:'ஃ',danda:'।',ddanda:'॥',avagraha:'',
+  nums:{'0':'0','1':'1','2':'2','3':'3','4':'4','5':'5','6':'6','7':'7','8':'8','9':'9'}
+},
+telugu:{
+  vowels:{a:'అ',aa:'ఆ',A:'ఆ',i:'ఇ',ee:'ఈ',I:'ఈ',u:'ఉ',oo:'ఊ',U:'ఊ',Ru:'ఋ',e:'ఎ',E:'ఏ',ai:'ఐ',o:'ఒ',O:'ఓ',au:'ఔ'},
+  consonants:{k:'క',kh:'ఖ',K:'ఖ',g:'గ',gh:'ఘ',G:'ఘ','~g':'ఙ',ch:'చ',Ch:'ఛ',j:'జ',jh:'ఝ',J:'ఝ','~j':'ఞ',
+    T:'ట',Th:'ఠ',D:'డ',Dh:'ఢ',N:'ణ',t:'త',th:'థ',d:'ద',dh:'ధ',n:'న',p:'ప',ph:'ఫ',b:'బ',bh:'భ',m:'మ',
+    y:'య',r:'ర',l:'ల',v:'వ',w:'వ',sh:'శ',Sh:'ష',s:'స',h:'హ',L:'ళ'},
+  signs:{a:'',aa:'ా',A:'ా',i:'ి',ee:'ీ',I:'ీ',u:'ు',oo:'ూ',U:'ూ',Ru:'ృ',e:'ె',E:'ే',ai:'ై',o:'ొ',O:'ో',au:'ౌ'},
+  virama:'్',anusvara:'ం',visarga:'ః',danda:'।',ddanda:'॥',avagraha:'ఽ',
+  nums:{'0':'౦','1':'౧','2':'౨','3':'౩','4':'౪','5':'౫','6':'౬','7':'౭','8':'౮','9':'౯'}
+},
+bengali:{
+  vowels:{a:'অ',aa:'আ',A:'আ',i:'ই',ee:'ঈ',I:'ঈ',u:'উ',oo:'ঊ',U:'ঊ',Ru:'ঋ',e:'এ',ai:'ঐ',o:'ও',au:'ঔ'},
+  consonants:{k:'ক',kh:'খ',K:'খ',g:'গ',gh:'ঘ',G:'ঘ','~g':'ঙ',ch:'চ',Ch:'ছ',j:'জ',jh:'ঝ',J:'ঝ','~j':'ঞ',
+    T:'ট',Th:'ঠ',D:'ড',Dh:'ঢ',N:'ণ',t:'ত',th:'থ',d:'দ',dh:'ধ',n:'ন',p:'প',ph:'ফ',b:'ব',bh:'ভ',m:'ম',
+    y:'য',r:'র',l:'ল',v:'ব',w:'ব',sh:'শ',Sh:'ষ',s:'স',h:'হ'},
+  signs:{a:'',aa:'া',A:'া',i:'ি',ee:'ী',I:'ী',u:'ু',oo:'ূ',U:'ূ',Ru:'ৃ',e:'ে',ai:'ৈ',o:'ো',au:'ৌ'},
+  virama:'্',anusvara:'ং',visarga:'ঃ',danda:'।',ddanda:'॥',avagraha:'ঽ',
+  nums:{'0':'০','1':'১','2':'২','3':'৩','4':'৪','5':'৫','6':'৬','7':'৭','8':'৮','9':'৯'}
+},
+gujarati:{
+  vowels:{a:'અ',aa:'આ',A:'આ',i:'ઇ',ee:'ઈ',I:'ઈ',u:'ઉ',oo:'ઊ',U:'ઊ',Ru:'ઋ',e:'એ',ai:'ઐ',o:'ઓ',au:'ઔ'},
+  consonants:{k:'ક',kh:'ખ',K:'ખ',g:'ગ',gh:'ઘ',G:'ઘ','~g':'ઙ',ch:'ચ',Ch:'છ',j:'જ',jh:'ઝ',J:'ઝ','~j':'ઞ',
+    T:'ટ',Th:'ઠ',D:'ડ',Dh:'ઢ',N:'ણ',t:'ત',th:'થ',d:'દ',dh:'ધ',n:'ન',p:'પ',ph:'ફ',b:'બ',bh:'ભ',m:'મ',
+    y:'ય',r:'ર',l:'લ',v:'વ',w:'વ',sh:'શ',Sh:'ષ',s:'સ',h:'હ',L:'ળ'},
+  signs:{a:'',aa:'ા',A:'ા',i:'િ',ee:'ી',I:'ી',u:'ુ',oo:'ૂ',U:'ૂ',Ru:'ૃ',e:'ે',ai:'ૈ',o:'ો',au:'ૌ'},
+  virama:'્',anusvara:'ં',visarga:'ઃ',danda:'।',ddanda:'॥',avagraha:'ઽ',
+  nums:{'0':'૦','1':'૧','2':'૨','3':'૩','4':'૪','5':'૫','6':'૬','7':'૭','8':'૮','9':'૯'}
+},
+malayalam:{
+  vowels:{a:'അ',aa:'ആ',A:'ആ',i:'ഇ',ee:'ഈ',I:'ഈ',u:'ഉ',oo:'ഊ',U:'ഊ',Ru:'ഋ',e:'എ',E:'ഏ',ai:'ഐ',o:'ഒ',O:'ഓ',au:'ഔ'},
+  consonants:{k:'ക',kh:'ഖ',K:'ഖ',g:'ഗ',gh:'ഘ',G:'ഘ','~g':'ങ',ch:'ച',Ch:'ഛ',j:'ജ',jh:'ഝ',J:'ഝ','~j':'ഞ',
+    T:'ട',Th:'ഠ',D:'ഡ',Dh:'ഢ',N:'ണ',t:'ത',th:'ഥ',d:'ദ',dh:'ധ',n:'ന',p:'പ',ph:'ഫ',b:'ബ',bh:'ഭ',m:'മ',
+    y:'യ',r:'ര',l:'ല',v:'വ',w:'വ',sh:'ശ',Sh:'ഷ',s:'സ',h:'ഹ',L:'ള',zh:'ഴ',R:'റ'},
+  signs:{a:'',aa:'ാ',A:'ാ',i:'ി',ee:'ീ',I:'ീ',u:'ു',oo:'ൂ',U:'ൂ',Ru:'ൃ',e:'െ',E:'േ',ai:'ൈ',o:'ൊ',O:'ോ',au:'ൌ'},
+  virama:'്',anusvara:'ം',visarga:'ഃ',danda:'।',ddanda:'॥',avagraha:'ഽ',
+  nums:{'0':'൦','1':'൧','2':'൨','3':'൩','4':'൪','5':'൫','6':'൬','7':'൭','8':'൮','9':'൯'}
+},
+sanskrit:{
+  vowels:{a:'अ',aa:'आ',A:'आ',i:'इ',ee:'ई',I:'ई',u:'उ',oo:'ऊ',U:'ऊ',Ru:'ऋ',e:'ए',ai:'ऐ',o:'ओ',au:'औ'},
+  consonants:{k:'क',kh:'ख',K:'ख',g:'ग',gh:'घ',G:'घ','~g':'ङ',ch:'च',Ch:'छ',j:'ज',jh:'झ',J:'झ','~j':'ञ',
+    T:'ट',Th:'ठ',D:'ड',Dh:'ढ',N:'ण',t:'त',th:'थ',d:'द',dh:'ध',n:'न',p:'प',ph:'फ',b:'ब',bh:'भ',m:'म',
+    y:'य',r:'र',l:'ल',v:'व',w:'व',sh:'श',Sh:'ष',s:'स',h:'ह',L:'ळ'},
+  signs:{a:'',aa:'ा',A:'ा',i:'ि',ee:'ी',I:'ी',u:'ु',oo:'ू',U:'ू',Ru:'ृ',e:'े',ai:'ै',o:'ो',au:'ौ'},
+  virama:'्',anusvara:'ं',visarga:'ः',danda:'।',ddanda:'॥',avagraha:'ऽ',
+  nums:{'0':'०','1':'१','2':'२','3':'३','4':'४','5':'५','6':'६','7':'७','8':'८','9':'९'}
+},
+marathi:{
+  vowels:{a:'अ',aa:'आ',A:'आ',i:'इ',ee:'ई',I:'ई',u:'उ',oo:'ऊ',U:'ऊ',Ru:'ऋ',e:'ए',ai:'ऐ',o:'ओ',au:'औ'},
+  consonants:{k:'क',kh:'ख',K:'ख',g:'ग',gh:'घ',G:'घ','~g':'ङ',ch:'च',Ch:'छ',j:'ज',jh:'झ',J:'झ','~j':'ञ',
+    T:'ट',Th:'ठ',D:'ड',Dh:'ढ',N:'ण',t:'त',th:'थ',d:'द',dh:'ध',n:'न',p:'प',ph:'फ',b:'ब',bh:'भ',m:'म',
+    y:'य',r:'र',l:'ल',v:'व',w:'व',sh:'श',Sh:'ष',s:'स',h:'ह',L:'ळ'},
+  signs:{a:'',aa:'ा',A:'ा',i:'ि',ee:'ी',I:'ी',u:'ु',oo:'ू',U:'ू',Ru:'ृ',e:'े',ai:'ै',o:'ो',au:'ौ'},
+  virama:'्',anusvara:'ं',visarga:'ः',danda:'।',ddanda:'॥',avagraha:'ऽ',
+  nums:{'0':'०','1':'१','2':'२','3':'३','4':'४','5':'५','6':'६','7':'७','8':'८','9':'९'}
+},
+odia:{
+  vowels:{a:'ଅ',aa:'ଆ',A:'ଆ',i:'ଇ',ee:'ଈ',I:'ଈ',u:'ଉ',oo:'ଊ',U:'ଊ',Ru:'ଋ',e:'ଏ',ai:'ଐ',o:'ଓ',au:'ଔ'},
+  consonants:{k:'କ',kh:'ଖ',K:'ଖ',g:'ଗ',gh:'ଘ',G:'ଘ','~g':'ଙ',ch:'ଚ',Ch:'ଛ',j:'ଜ',jh:'ଝ',J:'ଝ','~j':'ଞ',
+    T:'ଟ',Th:'ଠ',D:'ଡ',Dh:'ଢ',N:'ଣ',t:'ତ',th:'ଥ',d:'ଦ',dh:'ଧ',n:'ନ',p:'ପ',ph:'ଫ',b:'ବ',bh:'ଭ',m:'ମ',
+    y:'ଯ',r:'ର',l:'ଲ',v:'ୱ',w:'ୱ',sh:'ଶ',Sh:'ଷ',s:'ସ',h:'ହ',L:'ଳ'},
+  signs:{a:'',aa:'ା',A:'ା',i:'ି',ee:'ୀ',I:'ୀ',u:'ୁ',oo:'ୂ',U:'ୂ',Ru:'ୃ',e:'େ',ai:'ୈ',o:'ୋ',au:'ୌ'},
+  virama:'୍',anusvara:'ଂ',visarga:'ଃ',danda:'।',ddanda:'॥',avagraha:'ଽ',
+  nums:{'0':'୦','1':'୧','2':'୨','3':'୩','4':'୪','5':'୫','6':'୬','7':'୭','8':'୮','9':'୯'}
+},
+punjabi:{
+  vowels:{a:'ਅ',aa:'ਆ',A:'ਆ',i:'ਇ',ee:'ਈ',I:'ਈ',u:'ਉ',oo:'ਊ',U:'ਊ',e:'ਏ',ai:'ਐ',o:'ਓ',au:'ਔ'},
+  consonants:{k:'ਕ',kh:'ਖ',K:'ਖ',g:'ਗ',gh:'ਘ',G:'ਘ','~g':'ਙ',ch:'ਚ',Ch:'ਛ',j:'ਜ',jh:'ਝ',J:'ਝ','~j':'ਞ',
+    T:'ਟ',Th:'ਠ',D:'ਡ',Dh:'ਢ',N:'ਣ',t:'ਤ',th:'ਥ',d:'ਦ',dh:'ਧ',n:'ਨ',p:'ਪ',ph:'ਫ',b:'ਬ',bh:'ਭ',m:'ਮ',
+    y:'ਯ',r:'ਰ',l:'ਲ',v:'ਵ',w:'ਵ',sh:'ਸ਼',Sh:'ਸ਼',s:'ਸ',h:'ਹ',L:'ਲ਼'},
+  signs:{a:'',aa:'ਾ',A:'ਾ',i:'ਿ',ee:'ੀ',I:'ੀ',u:'ੁ',oo:'ੂ',U:'ੂ',e:'ੇ',ai:'ੈ',o:'ੋ',au:'ੌ'},
+  virama:'੍',anusvara:'ਂ',visarga:'ਃ',danda:'।',ddanda:'॥',avagraha:'',
+  nums:{'0':'੦','1':'੧','2':'੨','3':'੩','4':'੪','5':'੫','6':'੬','7':'੭','8':'੮','9':'੯'}
+},
+assamese:{
+  vowels:{a:'অ',aa:'আ',A:'আ',i:'ই',ee:'ঈ',I:'ঈ',u:'উ',oo:'ঊ',U:'ঊ',Ru:'ঋ',e:'এ',ai:'ঐ',o:'ও',au:'ঔ'},
+  consonants:{k:'ক',kh:'খ',K:'খ',g:'গ',gh:'ঘ',G:'ঘ','~g':'ঙ',ch:'চ',Ch:'ছ',j:'জ',jh:'ঝ',J:'ঝ','~j':'ঞ',
+    T:'ট',Th:'ঠ',D:'ড',Dh:'ঢ',N:'ণ',t:'ত',th:'থ',d:'দ',dh:'ধ',n:'ন',p:'প',ph:'ফ',b:'ব',bh:'ভ',m:'ম',
+    y:'য',r:'ৰ',l:'ল',v:'ৱ',w:'ৱ',sh:'শ',Sh:'ষ',s:'স',h:'হ'},
+  signs:{a:'',aa:'া',A:'া',i:'ি',ee:'ী',I:'ী',u:'ু',oo:'ূ',U:'ূ',Ru:'ৃ',e:'ে',ai:'ৈ',o:'ো',au:'ৌ'},
+  virama:'্',anusvara:'ং',visarga:'ঃ',danda:'।',ddanda:'॥',avagraha:'ঽ',
+  nums:{'0':'০','1':'১','2':'২','3':'৩','4':'৪','5':'৫','6':'৬','7':'৭','8':'৮','9':'৯'}
+}
+};
+
+const LANG_ORDER=['kannada','hindi','sanskrit','telugu','tamil','bengali','gujarati','malayalam','odia','punjabi','assamese','marathi'];
+let kmLang='kannada';
+
+// Keyboard layout: each key is [englishLabel, translitKey, type]
+// type: 'v'=vowel, 'c'=consonant, 's'=special
+const KB_ROWS=[
+  // Row 1: number row
+  [{en:'`',tk:'`',ty:'s'},{en:'1',tk:'1',ty:'s'},{en:'2',tk:'2',ty:'s'},{en:'3',tk:'3',ty:'s'},
+   {en:'4',tk:'4',ty:'s'},{en:'5',tk:'5',ty:'s'},{en:'6',tk:'6',ty:'s'},{en:'7',tk:'7',ty:'s'},
+   {en:'8',tk:'8',ty:'s'},{en:'9',tk:'9',ty:'s'},{en:'0',tk:'0',ty:'s'}],
+  // Row 2: qwerty
+  [{en:'q',tk:'',ty:'s'},{en:'w',tk:'w',ty:'c'},{en:'e',tk:'e',ty:'v'},{en:'r',tk:'r',ty:'c'},
+   {en:'t',tk:'t',ty:'c'},{en:'y',tk:'y',ty:'c'},{en:'u',tk:'u',ty:'v'},{en:'i',tk:'i',ty:'v'},
+   {en:'o',tk:'o',ty:'v'},{en:'p',tk:'p',ty:'c'}],
+  // Row 3: home row
+  [{en:'a',tk:'a',ty:'v'},{en:'s',tk:'s',ty:'c'},{en:'d',tk:'d',ty:'c'},{en:'f',tk:'f',ty:'c'},
+   {en:'g',tk:'g',ty:'c'},{en:'h',tk:'h',ty:'c'},{en:'j',tk:'j',ty:'c'},{en:'k',tk:'k',ty:'c'},
+   {en:'l',tk:'l',ty:'c'}],
+  // Row 4: bottom
+  [{en:'z',tk:'z',ty:'c'},{en:'x',tk:'x',ty:'c'},{en:'c',tk:'c',ty:'c'},{en:'v',tk:'v',ty:'c'},
+   {en:'b',tk:'b',ty:'c'},{en:'n',tk:'n',ty:'c'},{en:'m',tk:'m',ty:'c'}],
+  // Row 5: space
+  [{en:'Space',tk:' ',ty:'s',cls:'kb-space'}]
+];
+
+function getIndicChar(lang, key){
+  const m=KM_MAPS[lang];
+  if(!m)return '';
+  // number keys
+  if(m.nums&&m.nums[key])return m.nums[key];
+  // vowel
+  if(m.vowels[key])return m.vowels[key];
+  // consonant → show base+a (inherent vowel)
+  if(m.consonants[key])return m.consonants[key];
+  return '';
+}
+
+function buildKeyboard(){
+  const wrap=document.getElementById('kbWrap');
+  wrap.innerHTML='';
+  const m=KM_MAPS[kmLang];
+  KB_ROWS.forEach(row=>{
+    const rowEl=document.createElement('div');
+    rowEl.className='kb-row';
+    row.forEach(k=>{
+      const keyEl=document.createElement('div');
+      let cls='kb-key';
+      if(k.cls)cls+=' '+k.cls;
+      // Determine type color
+      const indic=getIndicChar(kmLang,k.tk);
+      if(k.ty==='v')cls+=' vowel';
+      else if(k.ty==='c'&&indic)cls+=' consonant';
+      else cls+=' special';
+      keyEl.className=cls;
+      keyEl.dataset.tk=k.tk;
+      // Content
+      const enSpan=document.createElement('span');
+      enSpan.className='kb-en';
+      enSpan.textContent=k.en;
+      const inSpan=document.createElement('span');
+      inSpan.className='kb-in';
+      inSpan.textContent=indic;
+      keyEl.appendChild(enSpan);
+      keyEl.appendChild(inSpan);
+      // Tooltip
+      if(indic||k.en==='Space'){
+        const tip=document.createElement('div');
+        tip.className='kb-tip';
+        if(k.en==='Space')tip.textContent='Space';
+        else tip.textContent=k.en+' → '+indic;
+        keyEl.appendChild(tip);
+      }
+      // Click handler
+      keyEl.addEventListener('click',()=>{
+        keyEl.classList.add('pressed');
+        setTimeout(()=>keyEl.classList.remove('pressed'),150);
+        appendToPreview(k.tk);
+      });
+      rowEl.appendChild(keyEl);
+    });
+    wrap.appendChild(rowEl);
+  });
+}
+
+let previewBuffer='';
+const previewText=document.getElementById('kbPreviewText');
+function appendToPreview(ch){
+  previewBuffer+=ch;
+  previewText.textContent=kmTransliterate(previewBuffer);
+}
+
+// Handle physical keyboard in preview
+document.addEventListener('keydown',(e)=>{
+  const kbWrap=document.getElementById('kbWrap');
+  if(!kbWrap)return;
+  const rect=kbWrap.getBoundingClientRect();
+  // Only handle if keyboard map section is roughly visible
+  const sec=document.getElementById('keyboard-map');
+  if(!sec)return;
+  const sr=sec.getBoundingClientRect();
+  if(sr.bottom<0||sr.top>window.innerHeight)return;
+  // Don't capture if typing in an input
+  if(document.activeElement&&(document.activeElement.tagName==='INPUT'||document.activeElement.tagName==='TEXTAREA'))return;
+  if(e.key==='Backspace'){
+    previewBuffer=previewBuffer.slice(0,-1);
+    previewText.textContent=kmTransliterate(previewBuffer);
+    // Highlight backspace visually
+    return;
+  }
+  if(e.key.length===1&&!e.ctrlKey&&!e.metaKey){
+    appendToPreview(e.key);
+    // Highlight the pressed key
+    const keys=kbWrap.querySelectorAll('.kb-key');
+    keys.forEach(k=>{
+      if(k.querySelector('.kb-en')&&k.querySelector('.kb-en').textContent.toLowerCase()===e.key.toLowerCase()){
+        k.classList.add('pressed');
+        setTimeout(()=>k.classList.remove('pressed'),150);
+      }
+    });
+  }
+});
+
+// Transliteration engine (reuses same logic as playground)
+function kmTransliterate(input){
+  const map=KM_MAPS[kmLang];
+  if(!map||!input)return '';
+  let result='',i=0;
+  const len=input.length;
+  let afterConsonant=false;
+  while(i<len){
+    let matched=false;
+    for(let ml=3;ml>=1;ml--){
+      const chunk=input.substr(i,ml);
+      if(chunk==='M'&&afterConsonant){result+=map.anusvara;i++;matched=true;afterConsonant=false;break;}
+      if(chunk==='H'&&afterConsonant){result+=map.visarga;i++;matched=true;afterConsonant=false;break;}
+      if(map.consonants[chunk]){
+        if(afterConsonant)result+=map.virama;
+        result+=map.consonants[chunk];
+        afterConsonant=true;i+=ml;matched=true;break;
+      }
+      if(afterConsonant&&map.signs[chunk]!==undefined){
+        result+=map.signs[chunk];afterConsonant=false;i+=ml;matched=true;break;
+      }
+      if(!afterConsonant&&map.vowels[chunk]){
+        result+=map.vowels[chunk];afterConsonant=false;i+=ml;matched=true;break;
+      }
+    }
+    if(!matched){
+      if(map.nums&&map.nums[input[i]]){
+        if(afterConsonant){result+=map.signs['a']||'';afterConsonant=false;}
+        result+=map.nums[input[i]];
+      }else{
+        if(afterConsonant&&input[i]===' '){afterConsonant=false;}
+        else if(afterConsonant&&!/[a-zA-Z]/.test(input[i])){afterConsonant=false;}
+        result+=input[i];
+      }
+      i++;
+    }
+  }
+  return result;
+}
+
+// --- Language selector ---
+function buildKmLangs(){
+  const row=document.getElementById('kmLangs');
+  row.innerHTML='';
+  LANG_ORDER.forEach(l=>{
+    const btn=document.createElement('button');
+    btn.className='km-lang'+(l===kmLang?' active':'');
+    btn.textContent=l.charAt(0).toUpperCase()+l.slice(1);
+    btn.onclick=()=>{
+      kmLang=l;
+      row.querySelectorAll('.km-lang').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      previewBuffer='';
+      previewText.textContent='';
+      buildKeyboard();
+      buildRefPanels();
+    };
+    row.appendChild(btn);
+  });
+}
+
+// --- Reference Tables ---
+function buildRefPanels(){
+  const container=document.getElementById('refPanels');
+  container.innerHTML='';
+  const m=KM_MAPS[kmLang];
+  if(!m)return;
+
+  // Vowels panel
+  const vowelData=[
+    ['a','Short A'],['aa / A','Long Aa'],['i','Short I'],['ee / I','Long Ii'],
+    ['u','Short U'],['oo / U','Long Uu'],['Ru','Vocalic R'],
+    ['e','E'],['E','Long E (Kan/Tel)'],['ai','Ai'],
+    ['o','O'],['O','Long O (Kan/Tel)'],['au','Au']
+  ];
+  const vPanel=makePanel('vowels',true);
+  const vTable=document.createElement('table');
+  vTable.className='ref-table';
+  vTable.innerHTML='<thead><tr><th>Type</th><th>Vowel</th><th>Sign (on क/ka)</th><th>Description</th></tr></thead>';
+  const vBody=document.createElement('tbody');
+  vowelData.forEach(([keys,desc])=>{
+    const mainKey=keys.split('/')[0].trim();
+    const vowel=m.vowels[mainKey]||'';
+    const sign=m.signs[mainKey]!==undefined?(m.consonants['k']||'')+(m.signs[mainKey]||''):'';
+    const tr=document.createElement('tr');
+    tr.innerHTML='<td class="rt-en">'+escH(keys)+'</td><td class="rt-sc">'+escH(vowel)+'</td><td class="rt-sc">'+escH(sign)+'</td><td style="font-size:.78rem;color:var(--dim2)">'+escH(desc)+'</td>';
+    vBody.appendChild(tr);
+  });
+  vTable.appendChild(vBody);
+  vPanel.appendChild(vTable);
+  container.appendChild(vPanel);
+
+  // Consonants panel
+  const cPanel=makePanel('consonants',false);
+  const cTable=document.createElement('table');
+  cTable.className='ref-table';
+  cTable.innerHTML='<thead><tr><th>Type</th><th>Consonant</th><th>With ा (aa)</th></tr></thead>';
+  const cBody=document.createElement('tbody');
+  const vargas=[
+    {name:'Ka-varga (gutturals)',keys:[['k','ka'],['kh','kha'],['g','ga'],['gh','gha'],['~g','~ga (nga)']]},
+    {name:'Cha-varga (palatals)',keys:[['ch','cha'],['Ch','Cha'],['j','ja'],['jh','jha'],['~j','~ja (nya)']]},
+    {name:'Ta-varga (retroflex)',keys:[['T','Ta'],['Th','Tha'],['D','Da'],['Dh','Dha'],['N','Na']]},
+    {name:'ta-varga (dentals)',keys:[['t','ta'],['th','tha'],['d','da'],['dh','dha'],['n','na']]},
+    {name:'Pa-varga (labials)',keys:[['p','pa'],['ph','pha'],['b','ba'],['bh','bha'],['m','ma']]},
+    {name:'Antastha / Ushma',keys:[['y','ya'],['r','ra'],['l','la'],['v','va'],['sh','sha'],['Sh','Sha'],['s','sa'],['h','ha'],['L','La (if available)']]}
+  ];
+  vargas.forEach(vg=>{
+    const htr=document.createElement('tr');
+    htr.innerHTML='<td class="rt-varga" colspan="3">'+escH(vg.name)+'</td>';
+    cBody.appendChild(htr);
+    vg.keys.forEach(([key,label])=>{
+      const cons=m.consonants[key];
+      if(!cons)return;
+      const withAa=cons+(m.signs['aa']||'');
+      const tr=document.createElement('tr');
+      tr.innerHTML='<td class="rt-en">'+escH(label)+'</td><td class="rt-sc">'+escH(cons)+'</td><td class="rt-sc">'+escH(withAa)+'</td>';
+      cBody.appendChild(tr);
+    });
+  });
+  cTable.appendChild(cBody);
+  cPanel.appendChild(cTable);
+  container.appendChild(cPanel);
+
+  // Special panel
+  const sPanel=makePanel('special',false);
+  const sTable=document.createElement('table');
+  sTable.className='ref-table';
+  sTable.innerHTML='<thead><tr><th>Type</th><th>Output</th><th>Description</th></tr></thead>';
+  const sBody=document.createElement('tbody');
+  const specials=[
+    ['M (after consonant)',m.anusvara,'Anusvara (nasal)'],
+    ['H (after consonant)',m.visarga,'Visarga'],
+    ['|',m.danda||'।','Danda (full stop)'],
+    ['||',m.ddanda||'॥','Double danda'],
+    ['&',m.avagraha||'ऽ','Avagraha'],
+  ];
+  // Add digit mappings
+  if(m.nums){
+    const digitStr=Object.entries(m.nums).map(([e,i])=>e+'→'+i).join(' ');
+    specials.push(['0-9',digitStr,'Script numerals']);
+  }
+  specials.forEach(([key,out,desc])=>{
+    if(!out)return;
+    const tr=document.createElement('tr');
+    tr.innerHTML='<td class="rt-en">'+escH(key)+'</td><td class="rt-sc">'+escH(out)+'</td><td style="font-size:.78rem;color:var(--dim2)">'+escH(desc)+'</td>';
+    sBody.appendChild(tr);
+  });
+  sTable.appendChild(sBody);
+  sPanel.appendChild(sTable);
+  container.appendChild(sPanel);
+
+  // Conjuncts panel
+  const jPanel=makePanel('conjuncts',false);
+  const jTable=document.createElement('table');
+  jTable.className='ref-table';
+  jTable.innerHTML='<thead><tr><th>Type</th><th>Result</th><th>Description</th></tr></thead>';
+  const jBody=document.createElement('tbody');
+  const conjuncts=[
+    ['kka',null,'Double ka'],
+    ['ksha',null,'Ksha'],
+    ['tra',null,'Tra'],
+    ['jna',null,'Jnya'],
+    ['shra',null,'Shra'],
+    ['shri',null,'Shri'],
+    ['ddha',null,'Ddha'],
+    ['nna',null,'Nna'],
+    ['tta',null,'Tta'],
+    ['ttha',null,'Ttha'],
+    ['nda',null,'Nda'],
+    ['mba',null,'Mba'],
+  ];
+  conjuncts.forEach(([input,,desc])=>{
+    const out=kmTransliterate(input);
+    const tr=document.createElement('tr');
+    tr.innerHTML='<td class="rt-en">'+escH(input)+'</td><td class="rt-sc">'+escH(out)+'</td><td style="font-size:.78rem;color:var(--dim2)">'+escH(desc)+'</td>';
+    jBody.appendChild(tr);
+  });
+  jTable.appendChild(jBody);
+  jPanel.appendChild(jTable);
+  container.appendChild(jPanel);
+}
+
+function makePanel(id,active){
+  const div=document.createElement('div');
+  div.className='ref-panel'+(active?' active':'');
+  div.dataset.panel=id;
+  return div;
+}
+
+function escH(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+// Tab switching
+document.getElementById('refTabs').addEventListener('click',(e)=>{
+  const tab=e.target.closest('.ref-tab');
+  if(!tab)return;
+  const id=tab.dataset.tab;
+  document.querySelectorAll('.ref-tab').forEach(t=>t.classList.remove('active'));
+  tab.classList.add('active');
+  document.querySelectorAll('.ref-panel').forEach(p=>p.classList.toggle('active',p.dataset.panel===id));
+});
+
+// Practice area transliteration
+const kmTryIn=document.getElementById('kmTryIn');
+const kmTryOut=document.getElementById('kmTryOut');
+kmTryIn.addEventListener('input',()=>{
+  kmTryOut.textContent=kmTransliterate(kmTryIn.value);
+});
+
+// Init
+buildKmLangs();
+buildKeyboard();
+buildRefPanels();
+})();
+
+// ===== SCROLL REVEAL =====
+
+// Scroll reveal
+const io=new IntersectionObserver(es=>{es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}
+})},{threshold:.05});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
